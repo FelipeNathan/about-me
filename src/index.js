@@ -75,3 +75,23 @@ window.getJobs = function(){
 }
 
 window.reverse = (order) => order % 2 == 0
+
+window.getInfo = function() {
+    return {
+        name: "Felipe Nathan Campigoto",
+        age: `${getAge()} anos`,
+        location: "Joinville - Santa Catarina - Brasil",
+        resume: `
+            Sou um desenvolvedor que gosta de ler sobre a linguagem que utilizo para trabalhar e também sobre novas linguagens que tenho vontade de apreder.
+            Nas horas vagas gosto de estudar sobre alguma linguagem que tenho curiosidade, como, atualmente além do java, estou estudando sobre ruby.
+            Além de estudar, gosto de me descontrair com jogos de computador, assistindo séries com minha esposa ou brincar com nossos pets.
+        `.trim()
+    }
+}
+
+const getAge = function() {
+    const birthday = new Date(1991, 3, 13).getTime();
+    const now = new Date().getTime();
+    const age = (now - birthday) / (365 * 24 * 60 * 60 * 1000);
+    return Math.floor(age);
+}
