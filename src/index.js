@@ -133,6 +133,40 @@ window.getInfo = function() {
     }
 }
 
+window.getSkills = function() {
+    return {
+        skills: [{
+            name: 'Java',
+            level: 95,
+            tools: ['Spring', 'Springboot', 'Spring Stomp', 'Hibernate', 'Tomcat', 'Jboss', 'SWT', 'Kotlin', 'REST API']
+        }, {
+            name: 'Javascript',
+            level: 90,
+            tools: ['Vanilla', 'jQuery', 'Angular', 'AngularJS', 'React', 'REST API', 'NodeJS', 'JSON', 'HTML', 'CSS', 'Ionic']
+        }, {
+            name: 'SQL',
+            level: 70,
+            tools: ['SQL Server', 'MySQL', 'Postgre', 'PL/SQL', 'MongoDB', 'SQLite']
+        }, {
+            name: 'CI/CD',
+            level: 70,
+            tools: ['Git', 'Github', 'Github Actions', 'Git Stash', 'Bit Bucket', 'Jenkins', 'Bamboo']
+        }, {
+            name: 'Architecture',
+            level: 60,
+            tools: ['Docker', 'ActiveMQ', 'RabbitMQ', 'Monolith', 'Microsservices']
+        }, {
+            name: 'AWS',
+            level: 30,
+            tools: ['S3', 'ClouldTrail', 'Athena']
+        }, {
+            name: 'Ruby',
+            level: 20,
+            tools: ['Bundle', 'Rails', 'Puma']
+        }].sort((s1, s2) => s1.level >= s2.level ? -1 : 1)
+    }
+}
+
 const getAge = function() {
     const birthday = new Date(1991, 3, 13).getTime();
     const now = new Date().getTime();
