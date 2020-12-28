@@ -1,0 +1,27 @@
+name: github pages
+
+on:
+  push:
+    branches:
+      - main 
+
+jobs:
+  deploy:
+    runs-on: ubuntu-18.04
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Setup Node
+        uses: actions/setup-node@v2.1.2
+        with:
+          node-version: '12.18.3'
+        run: npm run build
+
+      - name: deploy changes to a repo
+        uses: sugatpoudel/git-deploy@v0.1
+        with:
+          changes: dist
+          repository: git@github.com:FelipeNathan/felipenathan.github.io.git
+          ssh_key: ${{ secrets.SSH_DEPLOY_KEY }}
+          name: FelipeNathan
+          email: ncampigoto@gmail.com

@@ -3,9 +3,8 @@
   <meta charset="utf-8" />
   <title>Resume of Felipe Nathan</title>    
 </head>
-<body class="bg-gray-800 text-gray-300">
-  
-  <div class="w-full h-screen bg-gray-dark p-10">
+<body>
+  <div class="w-full bg-gray-800 text-gray-300 p-10 font-montserrat">
     
     <div class="flex flex-col w-full space-y-4" x-data="getInfo()">
       <div class="bg-no-repeat bg-contain w-60 h-60 rounded-full self-center mb-8" style="background-image: url('assets/me.jpg')"></div>
@@ -13,7 +12,7 @@
       <h3 class="font-bold text-3xl text-center" x-text="name"></h3>
       <p class="text-base text-center" x-text="age" ></p>
       <p class="text-base text-center" x-text="location"></p>
-      <p class="text-base text-justify" x-text="resume"></p>
+      <div class="text-base" x-html="resume"></div>
     </div>
     
     <div>
@@ -48,6 +47,7 @@
     <div x-data="{ ...getJobs(), reverse }">
       
       <h3 class="my-3 font-semibold text-3xl text-center"> Experiences </h3>
+      
       <div class="relative my-10">
         <div class="border-r-2 border-opacity-20 border-green-700 border absolute h-full" style="left: 50%"></div>
         
@@ -113,6 +113,25 @@
     </template>
   </div>
 </div>
+
+<div>
+  <h3 class="my-3 font-semibold text-3xl text-center"> Educations </h3>
+  <div x-data="getEducations()" class="mr-16">
+        
+    <template x-for="item in items" :key="item">
+      <div>
+        <div class="flex flex-col items-start space-y-1">
+          <div class="my-2 font-base text-green-700 text-2xl" x-text="item.name"></div>
+          <div class="font-base text-base" x-text="item.period"></div>
+          <div class="font-base text-base" x-text="item.course"></div>
+          <div class="font-base text-base" x-text="item.local"></div>
+        </div>
+      </div>
+    </template>
+  </div>
+</div>
+
+
 </div>
 </body>
 </html>
