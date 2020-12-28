@@ -22,11 +22,12 @@ jobs:
           npm run build
 
       - name: Deploy changes to a repo
-        uses: sugatpoudel/git-deploy@v0.1
+        uses: sugatpoudel/git-deploy@v0.2
         with:
           changes: dist
           repository: git@github.com:FelipeNathan/felipenathan.github.io.git
           ssh_key: ${{ secrets.SSH_DEPLOY_KEY }}
           name: FelipeNathan
           email: ncampigoto@gmail.com
-          branch: main
+        env:
+          INPUT_BRANCH: main
