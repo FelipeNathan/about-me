@@ -29,5 +29,4 @@ jobs:
           ssh_key: ${{ secrets.SSH_DEPLOY_KEY }}
           name: FelipeNathan
           email: ncampigoto@gmail.com
-        env:
-          INPUT_BRANCH: main
+          branch: main
