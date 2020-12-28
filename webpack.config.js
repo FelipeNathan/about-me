@@ -1,16 +1,18 @@
 const path = require('path')
+const webpack = require("webpack")
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const TerserPlugin = require("terser-webpack-plugin");
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
-const CopyPlugin = require("copy-webpack-plugin");
+const CopyWebpackPlugin = require("copy-webpack-plugin");
 
 module.exports = {
   entry: './src/index.js',
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: '[name].bundle.js',
+    filename: '[name].[hash].js',
+    publicPath: ''
   },
   optimization: {
     minimize: true,
@@ -33,17 +35,33 @@ module.exports = {
           'css-loader',
           'postcss-loader',
         ]
+      },{
+        test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: '[name].[ext]',
+              outputPath: 'assets/fonts/'
+            }
+          }
+        ]
       }
     ]
   },
   plugins: [
     new CleanWebpackPlugin(),
-    new MiniCssExtractPlugin(),
+    new webpack.WatchIgnorePlugin({
+      paths: [path.join(__dirname, "node_modules")]
+    }),
+    new MiniCssExtractPlugin({
+      filename: '[name].[hash].css'
+    }),
     new HtmlWebpackPlugin({
       filename: 'index.html',
       template: 'src/index.html',
     }),
-    new CopyPlugin({
+    new CopyWebpackPlugin({
       patterns: [
         { from: "src/assets", to: "assets" },
       ],
