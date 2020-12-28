@@ -87,12 +87,12 @@
                         <button 
                         class="text-sm text-gray-600 border-b-2 border-transparent hover:text-green-600 mr-2 focus:outline-none" 
                         :class="{ 'border-green-600 text-green-600': p.tab === 'description'}"
-                        @click="p.tab = 'description'">Descrição
+                        @click="p.tab = 'description'">Description
                       </button>
                       <button 
                       class="text-sm text-gray-600 border-b-2 border-transparent hover:text-green-600 mr-2 focus:outline-none" 
                       :class="{ 'border-green-600 text-green-600': p.tab === 'participation'}"
-                      @click="p.tab = 'participation'">O que fiz
+                      @click="p.tab = 'participation'">What I did
                     </button>
                   </div>
                   <template x-if="p.tab === 'description'">
