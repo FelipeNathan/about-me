@@ -1,12 +1,17 @@
 <html>
-<head>
+<head lang="en">
   <meta charset="utf-8" />
   <meta name="twitter:image:src" content="https://felipenathan.github.io/assets/mycover.jpg" />
   <meta name="og:image" content="https://felipenathan.github.io/assets/mycover.jpg" />
+
+  <meta http-equiv="cache-control" content="public" />
+  <meta http-equiv="expires" content="86400" />
+  <meta name="description" content="Resume of Felipe Nathan Campigoto"/>
+
   <title>Resume of Felipe Nathan</title>    
 </head>
 <body>
-  <div class="w-full bg-gray-800 text-gray-300 p-10 font-sans">
+  <div class="w-full bg-gray-800 text-gray-200 p-10 font-sans">
     
     <div class="flex flex-col w-full space-y-4" x-data="getInfo()">
       <div class="bg-no-repeat bg-contain w-60 h-60 rounded-full self-center mb-8" style="background-image: url('assets/me.jpg')"></div>
@@ -27,7 +32,7 @@
               <div class="text-grey-300 text-base text-right mr-2 w-2/12" x-text="skill.name"></div>
               <div class="my-2 bg-gray-600 rounded-full w-full">
                 <div :style="`width: ${skill.level}%`">
-                  <div class="progress-width progress-width rounded-full py-1 bg-green-700"></div>
+                  <div class="progress-width progress-width rounded-full py-1 bg-green-600"></div>
                 </div>
               </div>
             </div>
@@ -36,7 +41,7 @@
               <div class="w-full flex flex-row flex-wrap items-center space-x-2">
                 <template x-for="tool in skill.tools">
                   <div>
-                    <span class="inline-block mb-2 px-2 py-1 text-xs text-sm text-center text-green-700 transition bg-transparent border border-green-700 rounded-full ripple hover:bg-green-700 hover:text-gray-300" x-text="tool"></span>
+                    <span class="inline-block mb-2 px-2 py-1 text-xs text-sm text-center text-green-600 transition bg-transparent border border-green-600 rounded-full ripple hover:bg-green-600 hover:text-gray-300" x-text="tool"></span>
                   </div>
                 </template>
               </div>
@@ -51,18 +56,18 @@
       <h3 class="my-3 font-semibold text-3xl text-center"> Experiences </h3>
       
       <div class="relative my-10">
-        <div class="border-r-2 border-opacity-20 border-green-700 border absolute h-full" style="left: 50%"></div>
+        <div class="border-r-2 border-opacity-20 border-green-600 border absolute h-full" style="left: 50%"></div>
         
         <template x-for="job in jobs" :key="job">
           <div class="mb-8 flex justify-between" :class="{ 'flex-row-reverse': reverse(job.order)  }">
             
             <!-- Period -->
             <div class="order-1 w-6/12 grid mt-16 px-8" :class="{ 'justify-items-end': !reverse(job.order) } ">
-              <p class="font-semibold text-2xl text-green-700" x-text="job.period"></p>
+              <p class="font-semibold text-2xl text-green-600" x-text="job.period"></p>
             </div>
             
             <!-- Timeline ball-->
-            <div class="z-20 flex items-center order-1 bg-green-700 w-8 h-8 rounded-full mt-16" style="padding-top: -10em"></div>
+            <div class="z-20 flex items-center order-1 bg-green-600 w-8 h-8 rounded-full mt-16" style="padding-top: -10em"></div>
             
             <!-- Job description -->
             <div class="order-1 rounded-lg w-6/12 px-6 py-4 grid justify-items-stretch">
@@ -70,22 +75,22 @@
               <div class="justify-self-center flex flex-col items-center">
                 <div class="bg-no-repeat bg-contain w-32 h-32 rounded-full" :style="`background-image: url('${job.logo}')`"></div>
                 
-                <h3 class="my-4 font-bold text-green-700 text-2xl" :class="{ 'text-right': reverse(job.order)  }" x-text="job.company"></h3>
+                <h3 class="my-4 font-bold text-green-600 text-2xl" :class="{ 'text-right': reverse(job.order)  }" x-text="job.company"></h3>
               </div> 
               <div>
                 <template x-for="p in job.projects" :key="p">
                   <div>
                     <div class="flow flow-col space-y-4 mt-4">
-                      <div class="text-green-700 text-xl font-semibold" x-text="p.name"></div>
+                      <div class="text-green-600 text-xl font-semibold" x-text="p.name"></div>
                       <div class="flow flow-row">
                         <button 
-                        class="text-sm text-gray-600 border-b-2 border-transparent hover:text-green-700 mr-2 focus:outline-none" 
-                        :class="{ 'border-green-700 text-green-700': p.tab === 'description'}"
+                        class="text-sm text-gray-600 border-b-2 border-transparent hover:text-green-600 mr-2 focus:outline-none" 
+                        :class="{ 'border-green-600 text-green-600': p.tab === 'description'}"
                         @click="p.tab = 'description'">Descrição
                       </button>
                       <button 
-                      class="text-sm text-gray-600 border-b-2 border-transparent hover:text-green-700 mr-2 focus:outline-none" 
-                      :class="{ 'border-green-700 text-green-700': p.tab === 'participation'}"
+                      class="text-sm text-gray-600 border-b-2 border-transparent hover:text-green-600 mr-2 focus:outline-none" 
+                      :class="{ 'border-green-600 text-green-600': p.tab === 'participation'}"
                       @click="p.tab = 'participation'">O que fiz
                     </button>
                   </div>
@@ -106,7 +111,7 @@
           <div class="flex flex-row flex-wrap my-2 space-x-2 space-y-2">
             <template x-for="tech in job.techs">
               <div>
-                <span class="inline-block px-2 py-1 text-xs text-sm text-center text-green-700 transition bg-transparent border border-green-700 rounded-full ripple hover:bg-green-700 hover:text-gray-300" x-text="tech"></span>
+                <span class="inline-block px-2 py-1 text-xs text-sm text-center text-green-600 transition bg-transparent border border-green-600 rounded-full ripple hover:bg-green-600 hover:text-gray-300" x-text="tech"></span>
               </div>
             </template>
           </div>
@@ -123,7 +128,7 @@
     <template x-for="item in items" :key="item">
       <div>
         <div class="flex flex-col items-start space-y-1">
-          <div class="my-2 font-base text-green-700 text-2xl" x-text="item.name"></div>
+          <div class="my-2 font-base text-green-600 text-2xl" x-text="item.name"></div>
           <div class="font-base text-base" x-text="item.period"></div>
           <div class="font-base text-base" x-text="item.course"></div>
           <div class="font-base text-base" x-text="item.local"></div>
