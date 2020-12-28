@@ -12,7 +12,7 @@
   <title>Resume of Felipe Nathan</title>    
 </head>
 <body>
-  <div class="w-full bg-gray-800 text-gray-200 p-10 font-sans">
+  <div class="w-full bg-gray-800 text-gray-200 p-4 sm:p-6 md:p-10 font-sans">
     
     <div class="flex flex-col w-full space-y-4" x-data="getInfo()">
       <div class="bg-no-repeat bg-contain w-60 h-60 rounded-full self-center mb-8" style="background-image: url('assets/me.jpg')"></div>
@@ -38,8 +38,8 @@
               </div>
             </div>
             <div class="flex flex-row items-center mb-2" >
-              <div class="w-2/12"></div>
-              <div class="w-full flex flex-row flex-wrap items-center space-x-2">
+              <div class="hidden md:block w-2/12"></div>
+              <div class="w-full flex flex-row flex-wrap justify-center md:justify-start space-x-2">
                 <template x-for="tool in skill.tools">
                   <div>
                     <span class="inline-block mb-2 px-2 py-1 text-xs text-sm text-center text-green-600 transition bg-transparent border border-green-600 rounded-full ripple hover:bg-green-600 hover:text-gray-300" x-text="tool"></span>
