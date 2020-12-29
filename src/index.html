@@ -29,15 +29,33 @@
         
         <template x-for="skill in skills" :key="skill">
           <div>
-            <div class="flex flex-col md:flex-row items-center ">
-              <div class="text-grey-300 text-base text-center md:text-right md:mr-2 w-full md:w-2/12" x-text="skill.name"></div>
-              <div class="my-2 bg-gray-600 rounded-full w-full">
-                <div :style="`width: ${skill.level}%`">
-                  <div class="progress-width progress-width rounded-full py-1 bg-green-600"></div>
+            <div class="flex flex-col md:flex-row items-center">
+              <div class="text-grey-300 text-sm text-center md:text-right md:mr-2 w-full md:w-2/12" x-text="skill.name"></div>
+              
+              <div 
+                class="flex flex-row w-full cursor-pointer" 
+                @click="skill.showTools = !skill.showTools" >
+                <div class="my-2 bg-gray-600 rounded-full w-full">
+                  <div :style="`width: ${skill.level}%`">
+                    <div class="progress-width progress-width rounded-full py-1 bg-green-600"></div>
+                  </div>
+                </div>
+                <div class="w-3 ml-2 self-center transition duration-300 transform" :class="{ 'rotate-180': skill.showTools}" >
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+                  </svg>
                 </div>
               </div>
             </div>
-            <div class="flex flex-row items-center mb-2" >
+            <div x-show="skill.showTools"
+              x-transition:enter="transition ease-out duration-500"
+              x-transition:enter-start="opacity-0 h-0"
+              x-transition:enter-end="opacity-100 h-max"
+              x-transition:leave="transition ease-in duration-500"
+              x-transition:enter-start="opacity-100 h-max"
+              x-transition:enter-end="opacity-0 h-0"
+              class="flex flex-row items-center mb-2" 
+              >
               <div class="hidden md:grid w-2/12"></div>
               <div class="w-full flex flex-row flex-wrap justify-center md:justify-start space-x-2">
                 <template x-for="tool in skill.tools">
