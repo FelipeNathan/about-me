@@ -133,44 +133,26 @@ window.getInfo = function() {
     }
 }
 
+function skills(name, level, tools) {
+    return {
+        name,
+        level,
+        tools,
+        showTools: false,
+    }
+}
+
 window.getSkills = function() {
     return {
-        skills: [{
-            name: 'Java',
-            level: 95,
-            showTools: false,
-            tools: ['Spring', 'Springboot', 'Spring Stomp', 'Hibernate', 'Tomcat', 'Jboss', 'SWT', 'Kotlin', 'REST API']
-        }, {
-            name: 'Javascript',
-            level: 90,
-            showTools: false,
-            tools: ['Vanilla', 'jQuery', 'Angular', 'AngularJS', 'React', 'REST API', 'NodeJS', 'JSON', 'HTML', 'CSS', 'Ionic']
-        }, {
-            name: 'SQL',
-            level: 80,
-            showTools: false,
-            tools: ['SQL Server', 'MySQL', 'Postgre', 'PL/SQL', 'MongoDB', 'SQLite']
-        }, {
-            name: 'CI/CD',
-            level: 70,
-            showTools: false,
-            tools: ['Git', 'Github', 'Github Actions', 'Git Stash', 'Bit Bucket', 'Jenkins', 'Bamboo']
-        }, {
-            name: 'Architecture',
-            level: 60,
-            showTools: false,
-            tools: ['Docker', 'ActiveMQ', 'RabbitMQ', 'Monolith', 'Microsservices']
-        }, {
-            name: 'AWS',
-            level: 30,
-            showTools: false,
-            tools: ['S3', 'ClouldTrail', 'Athena']
-        }, {
-            name: 'Ruby',
-            level: 20,
-            showTools: false,
-            tools: ['Bundle', 'Rails', 'Puma']
-        }].sort((s1, s2) => s1.level >= s2.level ? -1 : 1)
+        skills: [
+            new skills('Java', 95, ['Spring', 'Springboot', 'Spring Stomp', 'Hibernate', 'Tomcat', 'Jboss', 'SWT', 'Kotlin', 'REST API']),
+            new skills('Javascript',   90,  ['Vanilla', 'jQuery', 'Angular', 'AngularJS', 'React', 'REST API', 'NodeJS', 'JSON', 'HTML', 'CSS', 'Ionic']),
+            new skills('SQL',   80,  ['SQL Server', 'MySQL', 'Postgre', 'PL/SQL', 'MongoDB', 'SQLite']),
+            new skills('CI/CD',   70,  ['Git', 'Github', 'Github Actions', 'Git Stash', 'Bit Bucket', 'Jenkins', 'Bamboo']),
+            new skills('Architecture',   60,  ['Docker', 'ActiveMQ', 'RabbitMQ', 'Monolith', 'Microsservices']),
+            new skills('AWS',   30,  ['S3', 'ClouldTrail', 'Athena']),
+            new skills('Ruby',   20,  ['Bundle', 'Rails', 'Puma'])
+        ].sort((s1, s2) => s1.level >= s2.level ? -1 : 1)
     }
 }
 
