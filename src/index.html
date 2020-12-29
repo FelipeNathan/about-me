@@ -12,7 +12,7 @@
   <title>Resume of Felipe Nathan</title>    
 </head>
 <body>
-  <div class="w-full bg-gray-800 text-gray-200 p-4 sm:p-6 md:p-10 font-sans">
+  <div class="w-full bg-gray-800 text-gray-200 p-4 sm:p-6 md:p-10 xl:px-18 2xl:px-36 font-sans">
     
     <div class="flex flex-col w-full">
       <div class="flex flex-col w-full items-center" x-data="getInfo()">
@@ -105,7 +105,7 @@
                   <div class="bg-no-repeat bg-contain w-32 h-32 rounded-full" :style="`background-image: url('${job.logo}')`"></div>
                   <h3 class="my-4 font-bold text-blue-400 text-2xl" :class="{ 'text-right': reverse(job.order)  }" x-text="job.company"></h3>
                 </div> 
-                
+
                 <div>
                   <template x-for="p in job.projects" :key="p">
                     <div>
