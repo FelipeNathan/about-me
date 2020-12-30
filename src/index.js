@@ -151,12 +151,14 @@ window.getSkills = function() {
     return {
         skills: [
             new skills('Java', 95, ['Spring', 'Springboot', 'Spring Stomp', 'Hibernate', 'Tomcat', 'Jboss', 'SWT', 'Kotlin', 'REST API']),
-            new skills('Javascript',   90,  ['Vanilla', 'jQuery', 'Angular', 'AngularJS', 'React', 'REST API', 'NodeJS', 'JSON', 'HTML', 'CSS', 'Ionic']),
+            new skills('Javascript',   90,  ['Vanilla', 'TypeScript', 'jQuery', 'Angular', 'AngularJS', 'React', 'REST API', 'NodeJS', 'JSON', 'HTML', 'CSS', 'Ionic']),
             new skills('SQL',   80,  ['SQL Server', 'MySQL', 'Postgre', 'PL/SQL', 'MongoDB', 'SQLite']),
-            new skills('CI/CD',   70,  ['Git', 'Github', 'Github Actions', 'Git Stash', 'Bit Bucket', 'Jenkins', 'Bamboo']),
-            new skills('Architecture',   60,  ['Docker', 'ActiveMQ', 'RabbitMQ', 'Monolith', 'Microsservices']),
-            new skills('AWS',   30,  ['S3', 'ClouldTrail', 'Athena']),
-            new skills('Ruby',   20,  ['Bundle', 'Rails', 'Puma'])
+            new skills('CI/CD',   85,  ['Git', 'Github', 'Github Actions', 'Git Stash', 'Bit Bucket', 'Jenkins', 'Bamboo']),
+            new skills('Architecture',   70,  ['Docker', 'ActiveMQ', 'RabbitMQ', 'Monolith', 'Microsservices']),
+            new skills('Android',   45,  ['Kotlin', 'MVP', 'Jetpack', 'Dagger 2', 'Material Design', 'Gradle']),
+            new skills('AWS',   43,  ['S3', 'ClouldTrail', 'Athena', 'IAM']),
+            new skills('Linux',   40,  ['Shell', 'Bash', 'ZSH']),
+            new skills('Ruby',   30,  ['Bundle', 'Rails', 'Puma']),
         ].sort((s1, s2) => s1.level >= s2.level ? -1 : 1)
     }
 }
