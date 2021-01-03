@@ -129,7 +129,7 @@ window.getInfo = function() {
             "+55 47 99658-2561",
             "ncampigoto@gmail.com"
         ],
-        location: "Joinville - Santa Catarina - Brasil",
+        location: "Joinville - Santa Catarina - Brazil",
         resume: `
             <p class="text-center"> In a few words, I'm a software developer that accepts challenges, I already worked with desktop, web and mobile applications. </p>
             <p class="text-center"> One of my favorites hobbies is learn about programming languages drinking some tasty beer, sure, if don't have a drop of coffee ;) </p>
