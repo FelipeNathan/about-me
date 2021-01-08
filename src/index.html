@@ -124,8 +124,8 @@
                   <div class="bg-no-repeat bg-contain w-32 h-32 rounded-full" :style="`background-image: url('${job.logo}')`"></div>
                   <h3 class="my-4 font-bold text-blue-400 text-2xl" :class="{ 'text-right': reverse(job.order)  }" x-text="job.company"></h3>
                 </div> 
-                
-                <div>
+
+                <div :class="{ 'h-96 overflow-hidden shadow-divisor': !job.showMoreProjects && job.showMoreProjectsButton }">
                   <template x-for="p in job.projects" :key="p">
                     <div>
                       <div class="flow flow-col space-y-4 mt-4">
@@ -148,6 +148,9 @@
                     </div>
                   </template>  
                 </div>
+                <template x-if="!job.showMoreProjects && job.showMoreProjectsButton"> <div class="text-sm text-right cursor-pointer" @click="job.showMoreProjects = true" > See more </div> </template>
+                <template x-if="job.showMoreProjects && job.showMoreProjectsButton"> <div class="text-sm text-right cursor-pointer" @click="job.showMoreProjects = false" > See less </div> </template>
+              
                 <div class="flex flex-row flex-wrap my-2 space-x-2 space-y-2">
                   <template x-for="tech in job.techs">
                     <div>

@@ -7,6 +7,8 @@ window.getJobs = function(){
         jobs: [{
             company: 'TOTVS S.A.',
             period: 'Aug 2020 / Current',
+            showMoreProjects: false,
+            showMoreProjectsButton: false,
             projects: [{
                 tab: 'description',
                 name: "Fluig Platform",
@@ -24,6 +26,8 @@ window.getJobs = function(){
         },{
             company: 'Varejonline',
             period: 'Jan 2016 / Jul 2020',
+            showMoreProjects: false,
+            showMoreProjectsButton: true,
             projects: [{
                 tab: 'description',
                 name: "Varejonline ERP",
@@ -70,6 +74,8 @@ window.getJobs = function(){
         },{
             company: 'Neomind',
             period: 'Jul 2015 / Jan 2016',
+            showMoreProjects: false,
+            showMoreProjectsButton: false,
             projects: [{
                 tab: 'description',
                 name: "Fusion Platform",
@@ -86,6 +92,8 @@ window.getJobs = function(){
         },{
             company: 'Linx',
             period: 'Jul 2012 / Jul 2015',
+            showMoreProjects: false,
+            showMoreProjectsButton: false,
             projects: [{
                 tab: 'description',
                 name: "Microvix ERP",
@@ -103,6 +111,8 @@ window.getJobs = function(){
         }, {
             company: 'Staff Informática',
             period: 'Jan 2012 / Jun 2012',
+            showMoreProjects: false,
+            showMoreProjectsButton: false,
             projects: [{
                 tab: 'description',
                 name: "GECEX",
