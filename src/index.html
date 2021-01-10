@@ -125,14 +125,14 @@
                   <h3 class="my-4 font-bold text-blue-400 text-2xl" :class="{ 'text-right': reverse(job.order)  }" x-text="job.company"></h3>
                 </div> 
 
-                <div :class="{ 'h-96 overflow-hidden shadow-divisor': !job.showMoreProjects && job.showMoreProjectsButton }">
+                <div class="projects overflow-hidden" :class="{ 'h-96 shadow-divisor': !job.showMoreProjects && job.showMoreProjectsButton }">
                   <template x-for="p in job.projects" :key="p">
                     <div>
                       <div class="flow flow-col space-y-4 mt-4">
                         <div class="text-blue-300 text-xl font-semibold" x-text="p.name"></div>
                         <div class="flow flow-row">
-                          <button class="text-sm border-b-2 border-transparent hover:text-blue-300 mr-2 focus:outline-none" :class="{ 'border-blue-300 text-blue-300': p.tab === 'description'}" @click="p.tab = 'description'">Description</button>
-                          <button class="text-sm border-b-2 border-transparent hover:text-blue-300 mr-2 focus:outline-none" :class="{ 'border-blue-300 text-blue-300': p.tab === 'participation'}" @click="p.tab = 'participation'">What I did</button>
+                          <button class="text-sm border-b border-gray-200 hover:border-blue-300 hover:text-blue-300 mr-2 focus:outline-none" :class="{ 'border-blue-300 text-blue-300': p.tab === 'description'}" @click="p.tab = 'description'">Description</button>
+                          <button class="text-sm border-b border-gray-200 hover:border-blue-300 hover:text-blue-300 mr-2 focus:outline-none" :class="{ 'border-blue-300 text-blue-300': p.tab === 'participation'}" @click="p.tab = 'participation'">What I did</button>
                         </div>
                         <template x-if="p.tab === 'description'">
                           <div class="text-base" x-text="p.description"></div>
