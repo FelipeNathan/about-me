@@ -39,6 +39,8 @@
   -webkit-animation-fill-mode:both; 
   -moz-animation: progressBar 2s ease-in-out;
   -moz-animation-fill-mode:both; 
+  animation: progressBar 2s ease-in-out;
+  animation-fill-mode: both;
 }
 
 .shadow-divisor {

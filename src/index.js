@@ -148,21 +148,21 @@ window.getInfo = function() {
     }
 }
 
-function skills(name, level, tools) {
+function skills(name, level, tools, showTools = false) {
     return {
         name,
         level,
         tools,
-        showTools: false,
+        showTools,
     }
 }
 
 window.getSkills = function() {
     return {
         skills: [
-            new skills('Java', 95, ['Spring', 'Springboot', 'Spring Stomp', 'Hibernate', 'Tomcat', 'Jboss', 'SWT', 'Kotlin', 'REST API']),
+            new skills('Java', 95, ['Spring', 'Springboot', 'Spring Stomp', 'Hibernate', 'Tomcat', 'Jboss', 'SWT', 'Kotlin', 'REST API', 'Java EE'], true),
             new skills('Javascript',   90,  ['Vanilla', 'TypeScript', 'jQuery', 'Angular', 'AngularJS', 'React', 'REST API', 'NodeJS', 'JSON', 'HTML', 'CSS', 'Ionic']),
-            new skills('SQL',   80,  ['SQL Server', 'MySQL', 'Postgre', 'PL/SQL', 'MongoDB', 'SQLite']),
+            new skills('SQL',   80,  ['SQL Server', 'MySQL', 'Postgres', 'PL/SQL', 'MongoDB', 'SQLite']),
             new skills('CI/CD',   85,  ['Git', 'Github', 'Github Actions', 'Git Stash', 'Bit Bucket', 'Jenkins', 'Bamboo']),
             new skills('Architecture',   70,  ['Docker', 'ActiveMQ', 'RabbitMQ', 'Monolith', 'Microsservices']),
             new skills('Android',   45,  ['Kotlin', 'MVP', 'Jetpack', 'Dagger 2', 'Material Design', 'Gradle']),
