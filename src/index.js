@@ -11,9 +11,9 @@ window.getJobs = function(){
             showMoreProjectsButton: false,
             projects: [{
                 tab: 'description',
-                name: "Fluig Platform",
-                description: "Fluig is a platform that aggregates several TOTVS services such as BPM, ECM, LMS and others",
-                participations: ["I perform maintenance and create new resources according to customer demands"],
+                name: "CRM - Team",
+                description: "CRM team work together with Salesforce to ensure the relationship of our customers",
+                participations: ["I work in CRM team, integration the user data to Sales Cloud and Marketing Cloud of Salesforce partner"],
             }],
             techs: ['Kotlin', 'AWS SQS', 'AWS Lambda', 'AWS Athena', 'MySQL', 'Docker', 'Kubernetes', 'Microservices', 'Datadog', 'Kibana', 'Jenkins'],
             logo: 'assets/guiabolso.jpg',
