@@ -11,7 +11,7 @@ module.exports = {
   entry: './src/index.js',
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: '[name].[hash].js',
+    filename: '[name].js',
     publicPath: ''
   },
   optimization: {
@@ -55,7 +55,7 @@ module.exports = {
       paths: [path.join(__dirname, "node_modules")]
     }),
     new MiniCssExtractPlugin({
-      filename: '[name].[hash].css'
+      filename: '[name].css'
     }),
     new HtmlWebpackPlugin({
       filename: 'index.html',

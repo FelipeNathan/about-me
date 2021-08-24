@@ -5,8 +5,22 @@ window.getJobs = function(){
 
     return {
         jobs: [{
+            company: 'Guiabolso',
+            period: 'Jun 2021 / Current',
+            showMoreProjects: false,
+            showMoreProjectsButton: false,
+            projects: [{
+                tab: 'description',
+                name: "Fluig Platform",
+                description: "Fluig is a platform that aggregates several TOTVS services such as BPM, ECM, LMS and others",
+                participations: ["I perform maintenance and create new resources according to customer demands"],
+            }],
+            techs: ['Kotlin', 'AWS SQS', 'AWS Lambda', 'AWS Athena', 'MySQL', 'Docker', 'Kubernetes', 'Microservices', 'Datadog', 'Kibana', 'Jenkins'],
+            logo: 'assets/guiabolso.jpg',
+            order: 6,
+        },{
             company: 'TOTVS S.A.',
-            period: 'Aug 2020 / Current',
+            period: 'Aug 2020 / Jun 2021',
             showMoreProjects: false,
             showMoreProjectsButton: false,
             projects: [{
@@ -22,7 +36,7 @@ window.getJobs = function(){
             }],
             techs: ['Springboot', 'Hibernate', 'Java 11', 'AWS', 'Jboss', 'MySQL'],
             logo: 'assets/totvs.jpg',
-            order: 1,
+            order: 5,
         },{
             company: 'Varejonline',
             period: 'Jan 2016 / Jul 2020',
@@ -70,7 +84,7 @@ window.getJobs = function(){
             }],
             techs: ['Springboot', 'Hibernate', 'Java 8', 'PostreSQL', 'Oracle', 'Tomcat', 'Angular 9', 'jQuery', 'Java SWT', 'ActiveMQ', 'Ionic', 'Typescript', 'Spring Stomp', 'Kotlin'],
             logo: 'assets/varejonline.jpg',
-            order: 2,
+            order: 4,
         },{
             company: 'Neomind',
             period: 'Jul 2015 / Jan 2016',
@@ -107,7 +121,7 @@ window.getJobs = function(){
             }],
             techs: ['ASP3', 'C#', 'SQL Server', 'IIS', 'jQuery'],
             logo: 'assets/linx.jpg',
-            order: 4,
+            order: 2,
         }, {
             company: 'Staff Informática',
             period: 'Jan 2012 / Jun 2012',
@@ -123,8 +137,8 @@ window.getJobs = function(){
             }],
             techs: ['Power Builder'],
             logo: 'assets/staff.jpg',
-            order: 5,
-        }].sort((j1, j2) => j1.order <= j2.order ? -1 : 1)
+            order: 1,
+        }].sort((j1, j2) => j1.order > j2.order ? -1 : 1)
     }
 }
 
