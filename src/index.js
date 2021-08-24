@@ -147,7 +147,7 @@ window.reverse = (order) => order % 2 == 0
 window.getInfo = function() {
     return {
         name: "Felipe Nathan Campigoto",
-        position: "Software Engineer",
+        position: "Software Developer",
         age: `${getAge()} years old`,
         contacts: [
             "+55 47 99658-2561",
