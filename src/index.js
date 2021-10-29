@@ -5,7 +5,7 @@ window.getJobs = function(){
 
     return {
         jobs: [{
-            company: 'Guiabolso',
+            company: 'Guiabolso / PicPay',
             period: 'Jun 2021 / Current',
             showMoreProjects: false,
             showMoreProjectsButton: false,
@@ -15,7 +15,7 @@ window.getJobs = function(){
                 description: "CRM team work together with Salesforce to ensure the relationship of our customers",
                 participations: ["I work in CRM team, integration the user data to Sales Cloud and Marketing Cloud of Salesforce partner"],
             }],
-            techs: ['Kotlin', 'AWS SQS', 'AWS Lambda', 'AWS Athena', 'MySQL', 'Docker', 'Kubernetes', 'Microservices', 'Datadog', 'Kibana', 'Jenkins'],
+            techs: ['Kotlin', 'AWS SQS', 'AWS Lambda', 'AWS Kinesis', 'AWS Firehose', 'AWS CloudWatch', 'MySQL', 'Docker', 'Kubernetes', 'Microservices', 'Datadog', 'Kibana', 'Jenkins'],
             logo: 'assets/guiabolso.jpg',
             order: 6,
         },{
@@ -174,15 +174,15 @@ function skills(name, level, tools, showTools = false) {
 window.getSkills = function() {
     return {
         skills: [
-            new skills('Java', 95, ['Spring', 'Springboot', 'Spring Stomp', 'Hibernate', 'Tomcat', 'Jboss', 'SWT', 'Kotlin', 'REST API', 'Java EE'], true),
-            new skills('Javascript',   90,  ['Vanilla', 'TypeScript', 'jQuery', 'Angular', 'AngularJS', 'React', 'REST API', 'NodeJS', 'JSON', 'HTML', 'CSS', 'Ionic']),
-            new skills('SQL',   80,  ['SQL Server', 'MySQL', 'Postgres', 'PL/SQL', 'MongoDB', 'SQLite']),
-            new skills('CI/CD',   85,  ['Git', 'Github', 'Github Actions', 'Git Stash', 'Bit Bucket', 'Jenkins', 'Bamboo']),
+            new skills('JVM', 95, ['Java', 'Spring', 'Springboot', 'Spring Stomp', 'Hibernate', 'SWT', 'Kotlin', 'REST API', 'Java EE'], true),
+            new skills('Javascript',   85,  ['Vanilla', 'TypeScript', 'jQuery', 'Angular', 'AngularJS', 'React', 'REST API', 'NodeJS', 'JSON', 'HTML', 'CSS', 'Ionic']),
+            new skills('CI/CD',   83,  ['Git', 'Github', 'Github Actions', 'Git Stash', 'Bit Bucket', 'Jenkins', 'Bamboo']),
+            new skills('SQL',   80,  ['SQL Server', 'MySQL', 'Postgres', 'PL/SQL', 'MongoDB', 'SQLite', 'RDS']),
+            new skills('AWS',   75,  ['S3', 'SQS', 'RDS', 'CloudWatch', 'ClouldTrail', 'Athena', 'IAM', 'Kinesis', 'Firehose', 'Lambda', 'EventBridge']),
             new skills('Architecture',   70,  ['Docker', 'ActiveMQ', 'RabbitMQ', 'Monolith', 'Microsservices']),
             new skills('Android',   45,  ['Kotlin', 'MVP', 'Jetpack', 'Dagger 2', 'Material Design', 'Gradle']),
-            new skills('AWS',   43,  ['S3', 'ClouldTrail', 'Athena', 'IAM']),
-            new skills('Linux',   40,  ['Shell', 'Bash', 'ZSH']),
-            new skills('Ruby',   30,  ['Bundle', 'Rails', 'Puma']),
+            new skills('Linux',   30,  ['Shell', 'Bash', 'ZSH']),
+            new skills('Ruby',   28,  ['Bundle', 'Rails', 'Puma']),
         ].sort((s1, s2) => s1.level >= s2.level ? -1 : 1)
     }
 }
