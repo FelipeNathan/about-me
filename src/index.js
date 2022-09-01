@@ -5,8 +5,23 @@ window.getJobs = function(){
 
     return {
         jobs: [{
+            company: 'PicPay',
+            period: 'Jul 2021 / Current',
+            showMoreProjects: false,
+            showMoreProjectsButton: false,
+            projects: [{
+                tab: 'description',
+                name: "OpenFinance",
+                description: "Responsible to manage data extraction between Finantial Institutions",
+                participations: ["Creating a service to manage the data extraction between Finatial Entities with user consent, this is a backend service where the PicPay app start the flow of collect data and then the platform can manage the user data to offer products"],
+            }],
+            techs: ['Kotlin', 'DynamoDB', 'Docker', 'Kubernetes', 'Microservices', 'Datadog', 'Jenkins', 'Kafka', 'Localstack', 'S3'],
+            logo: 'assets/picpay.png',
+            order: 7,
+        },
+            {
             company: 'Guiabolso / PicPay',
-            period: 'Jun 2021 / Current',
+            period: 'Jun 2021 / Jul 2021',
             showMoreProjects: false,
             showMoreProjectsButton: false,
             projects: [{
