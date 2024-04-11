@@ -5,6 +5,20 @@ window.getJobs = function(){
 
     return {
         jobs: [{
+            company: 'Meli',
+            period: 'Set 2023 / Current',
+            showMoreProjects: false,
+            showMoreProjectsButton: false,
+            projects: [{
+                tab: 'description',
+                name: "Profile Management",
+                description: "Responsible to manage the profile screens",
+                participations: ["Improving the performance of the apps making more resilience, implementing Circuit Breaker, changing to faster libraries, etc"],
+            }],
+            techs: ['Kotlin', 'Golang', 'Fury', 'Datadog', 'NewRelic'],
+            logo: 'assets/meli.jpg',
+            order: 7,
+        },{
             company: 'PicPay',
             period: 'Jul 2021 / Current',
             showMoreProjects: false,
